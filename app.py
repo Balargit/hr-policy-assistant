@@ -137,3 +137,8 @@ if question:
                 "The answer could not be generated. "
                 "Please check the app configuration and logs."
             )
+            except Exception:
+    st.error(
+        "The answer could not be generated. "
+        "Please check the app configuration and logs."
+    )

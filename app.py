@@ -132,13 +132,7 @@ if question:
                 {"role": "assistant", "content": answer}
             )
 
-        except Exception:
-            st.error(
-                "The answer could not be generated. "
-                "Please check the app configuration and logs."
-            )
-            except Exception:
-    st.error(
-        "The answer could not be generated. "
-        "Please check the app configuration and logs."
-    )
+        except Exception as e:
+            st.error(f"Error type: {type(e).__name__}")
+            st.code(str(e))
+           
